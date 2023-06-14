@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#board {
+  width: 420px;
+  margin: 0 auto;
+  border: 2px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+td {
+  height: 60px;
+  width: 60px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.piece {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+.p1 {
+  background-color: red;
+}
+
+.p2 {
+  background-color: blue;
+}
+
+.piece.p1::after,
+.piece.p2::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.piece.p1::after {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.piece.p2::after {
+  background-color: rgba(0, 0, 255, 0.8);
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .player-score {
+    display: flex;
+    align-items: center;
+  }
+  
+  .player-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .blue {
+    background-color: blue;
+  }
+  
+  .player-name {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .player-wins {
+    font-weight: bold;
+    font-size: 18px;
+  }
